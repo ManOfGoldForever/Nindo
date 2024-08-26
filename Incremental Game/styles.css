@@ -1,0 +1,86 @@
+/* Basic body styling */
+body {
+  font-family: Arial, sans-serif;
+  background: url('pixel-art-river-landscape-illustration.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f4f4f4; /* Light text color for contrast */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Paragraphs styling */
+p {
+  margin: 10px;
+  font-size: 16px;
+  color: #f4f4f4; /* Light text color for better visibility on dark background */
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #007BFF; /* Blue button background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Navigation button container styling */
+#navigateButtons {
+  margin: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Tab content styling */
+.tab-content {
+  display: none;
+  margin: 10px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Specific styles for various game elements */
+.bamboo-collected {
+  color: #90ee90; /* Light green color */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.bamboo-processed {
+  color: #ff6347; /* Tomato red color */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.yen-earned {
+  color: #ffd700; /* Gold color */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sharpen-sword-upgrade,
+.farmer-status,
+.carpenter-status,
+.manager-status,
+.samurai-status, /* Added Samurai status styling */
+.auto-save-timer {
+  color: #87ceeb; /* Sky blue color */
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* General styles for all elements */
+* {
+  outline: none;
+}

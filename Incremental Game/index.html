@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <title>Nindō</title>
+</head>
+<body>
+    <!-- Display for collected bamboo -->
+    <p id="bambooCollected" class="bamboo-collected">0 Bamboo Collected</p>
+    
+    <!-- Display for processed bamboo -->
+    <p id="bambooProcessed" class="bamboo-processed">0 Bamboo Processed</p>
+    
+    <!-- Display for yen earned -->
+    <p id="yenEarned" class="yen-earned">0 Yen Earned</p>
+    
+    <!-- Display for sharpen sword upgrade -->
+    <p id="sharpenSwordUpgrade" class="sharpen-sword-upgrade">Sharpen Sword: Level 1</p>
+    
+    <!-- Display for samurai status -->
+    <p id="samuraiStatus" class="samurai-status">Samurai: Level 0</p>
+    
+    <!-- Display for farmer status -->
+    <p id="farmerStatus" class="farmer-status">Farmer: Level 0</p>
+    
+    <!-- Display for carpenter status -->
+    <p id="carpenterStatus" class="carpenter-status">Carpenter: Level 0</p>
+
+    <!-- Display for manager count -->
+    <p id="managerCount" class="manager-status">Managers: 0</p>
+    
+    <!-- Display for auto-save timer -->
+    <p id="autoSaveTimer" class="auto-save-timer">Next Auto-Save In: 00:00</p>
+
+    <!-- Navigation buttons -->
+    <div id="navigateButtons">
+        <button onclick="tab('bambooCollectionMenu')">Go to Bamboo Collection</button>
+        <button onclick="tab('processingMenu')">Go to Processing</button>
+        <button onclick="tab('hireMenu')">Go to Hire</button>
+        <button onclick="tab('optionsMenu')">Go to Options</button>
+    </div>
+
+    <!-- Bamboo Collection Menu -->
+    <div id="bambooCollectionMenu" class="tab-content">
+        <button onclick="sliceBamboo()">Slice Bamboo</button>
+        <button onclick="sharpenSword()">Sharpen Sword (Cost: 10 Bamboo)</button>
+    </div>
+
+    <!-- Processing Menu -->
+    <div id="processingMenu" class="tab-content">
+        <button onclick="processBamboo()">Process Bamboo</button>
+        <button onclick="sellBamboo()">Sell Processed Bamboo</button>
+    </div>
+
+    <!-- Hire Menu -->
+    <div id="hireMenu" class="tab-content">
+        <button onclick="hireSamurai()">Hire Samurai (Cost: 100 Yen)</button>
+        <button onclick="hireFarmer()">Hire Farmer (Cost: 200 Yen)</button>
+        <button onclick="hireCarpenter()">Hire Carpenter (Cost: 300 Yen)</button>
+        <button onclick="hireManager()">Hire Manager (Cost: 500 Yen)</button>
+    </div>
+
+    <!-- Options Menu -->
+    <div id="optionsMenu" class="tab-content">
+        <label for="formatSelect">Select Number Format:</label>
+        <select id="formatSelect" onchange="changeFormat()">
+            <option value="default">Default</option>
+            <option value="scientific">Scientific</option>
+            <option value="engineering">Engineering</option>
+        </select>
+        <button onclick="resetGame()">Reset Save Data</button>
+    </div>
+
+    <script src="main.js" charset="utf-8" type="text/javascript"></script>
+</body>
+</html>
